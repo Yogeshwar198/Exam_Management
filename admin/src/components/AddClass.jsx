@@ -39,10 +39,10 @@ const AddClass = ({ data, onSave }) => {
             let response;
             if (data) {
                 // If data exists (meaning we're editing)
-                response = await axios.put(`https://exam-management-self.vercel.app/api/classes/${data._id}`, formData);
+                response = await axios.put(`http://localhost:4000/api/classes/${data._id}`, formData);
             } else {
                 // If no data exists (adding a new class)
-                response = await axios.post('https://exam-management-self.vercel.app/api/classes/add', formData);
+                response = await axios.post('http://localhost:4000/api/classes/add', formData);
             }
     
             console.log('Class saved:', response.data);
